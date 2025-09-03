@@ -4,6 +4,7 @@ import { ParseUtils } from "./ParseUtils";
 export class WidthParser implements IParser<number> {
   private width: number = 0;
   private rawWidth: string[] = [];
+
   parse(char: string): ParseState {
     if (this.rawWidth.length && ParseUtils.isEmpty(char)) {
       this.width = parseInt(this.rawWidth.join(""));
@@ -14,6 +15,7 @@ export class WidthParser implements IParser<number> {
 
     return ParseState.WIDTH;
   }
+  
   result(): number {
     return this.width;
   }

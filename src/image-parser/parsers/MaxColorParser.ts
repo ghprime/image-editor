@@ -4,6 +4,7 @@ import { ParseUtils } from "./ParseUtils";
 export class MaxColorParser implements IParser<number> {
   private maxColor: number = 0;
   private rawMaxColor: string[] = [];
+
   parse(char: string): ParseState {
     if (this.rawMaxColor.length && ParseUtils.isEmpty(char)) {
       this.maxColor = parseInt(this.rawMaxColor.join(""));
@@ -14,6 +15,7 @@ export class MaxColorParser implements IParser<number> {
 
     return ParseState.MAX_COLOR;
   }
+  
   result(): number {
     return this.maxColor;
   }

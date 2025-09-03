@@ -4,6 +4,7 @@ import { ParseUtils } from "./ParseUtils";
 export class TypeParser implements IParser<string> {
   private rawType: string[] = [];
   private type = "";
+  
   parse(char: string) {
     if (this.rawType.length && ParseUtils.isEmpty(char)) {
       this.type = this.rawType.join("");
