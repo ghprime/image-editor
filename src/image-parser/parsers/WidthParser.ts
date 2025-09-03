@@ -19,5 +19,4 @@ export class WidthParser implements IParser<number> {
   result(): number {
     return this.width;
   }
-
 }

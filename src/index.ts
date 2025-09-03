@@ -1,4 +1,4 @@
 export * from "./image-parser";
 export * from "./image-writer";
-export * from "./ImageEditor";
+export * from "./image-editor";
 export * from "./Image";
